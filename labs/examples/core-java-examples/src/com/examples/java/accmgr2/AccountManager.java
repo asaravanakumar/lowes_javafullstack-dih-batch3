@@ -1,4 +1,4 @@
-package com.examples.java.core.accmgr2;
+package com.examples.java.accmgr2;
 
 public class AccountManager {
 

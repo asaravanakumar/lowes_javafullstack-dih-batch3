@@ -1,4 +1,4 @@
-package com.examples.java.core.accmgr2;
+package com.examples.java.accmgr1;
 
 public class Account {
     private int id;

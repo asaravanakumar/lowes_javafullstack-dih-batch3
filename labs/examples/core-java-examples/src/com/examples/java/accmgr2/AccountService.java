@@ -1,31 +1,9 @@
-package com.examples.java.core.accmgr1;
+package com.examples.java.accmgr2;
 
-public class AccountManager {
-    private static Account[] accounts = new Account[5];
+public class AccountService {
+    private Account[] accounts = new Account[5];
 
-    public static void main(String[] args) {
-        // 1. Create set of Accounts (5)
-        createAccount();
-
-        // 2. View all Accounts
-        viewAccounts();
-
-        // 3. View an Account for given Account ID
-        viewAccount(102);
-
-        // 4. Update an Account for given Account ID
-        Account accountForUpdate = new Account(102, "Neha", "Deposit", 75000.0, true);
-        updateAccount(102, accountForUpdate);
-        viewAccounts();
-
-
-        // 5. Delete an Account for given Account ID
-        deleteAccount(102);
-        viewAccounts();
-
-    }
-
-    public static void createAccount() {
+    public void createAccount() {
         //int id, String name, String type, double balance, boolean active
         accounts[0] = new Account(100, "Anu", "Savings", 25000.0, true);
         accounts[1] = new Account(101, "John", "Loan", 250000.0, true);
@@ -36,7 +14,7 @@ public class AccountManager {
         System.out.println("Created " + accounts.length + " Accounts");
     }
 
-    public static void viewAccounts() {
+    public void viewAccounts() {
         System.out.println("Listing Accounts...");
         for(Account account: accounts) {
             System.out.println(account);
@@ -44,7 +22,7 @@ public class AccountManager {
         }
     }
 
-    public static void viewAccount(int id) {
+    public void viewAccount(int id) {
         System.out.println("Viewing Account " + id);
         for (Account account: accounts) {
             if(account.getId() == id) {
@@ -53,7 +31,7 @@ public class AccountManager {
         }
     }
 
-    public static void updateAccount(int id, Account accountForUpdate) {
+    public void updateAccount(int id, Account accountForUpdate) {
         System.out.println("Updating Account " + id);
 
         // Approach #1
@@ -73,7 +51,7 @@ public class AccountManager {
         }
     }
 
-    public static void deleteAccount(int id) {
+    public void deleteAccount(int id) {
         System.out.println("Deleting Account " + id);
         for(int i=0; i < accounts.length; i++) {
             if(accounts[i].getId() == id) {
