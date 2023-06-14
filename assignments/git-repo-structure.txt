@@ -26,11 +26,13 @@ lowes_javabootcamp-dih-batch3
 										
 					|___bankingapp-with-collection
 					|
+					|___bankingapp-with-collection-stats
+					|
+					 __ bankingapp-with-impexp
+					|
 					 __ bankingapp-with-validation
 					|
 					 __ bankingapp-with-jdbc
-					|
-					 __ bankingapp-with-impexp
 					|
 					 __ bankingapp-with-stats
 				|
