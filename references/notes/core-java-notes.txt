@@ -132,7 +132,48 @@ Language Constructs
 		
 		- company = new StringBuffer("Lowes")
 	
-
+Object Oriented Programming
+	- Class
+		- Template or Blueprint
+		
+	- Object
+		- Instance of a class
+		
+	- Abstraction
+		- showing up only essentials details
+		- abstract class
+		- can't instantiate
+		- extending class should provide implementation for all abstract methods
+	
+	- Encapsulation
+		- data hiding
+		- access modifiers
+		- default, private, protected, public
+		
+	- Inheritance
+		- acquiring/inheriting state and behavior from parent class
+		- multi level inheritance supported
+		- using extends
+		- multiple inheritance is not supported due to ambiguity during run time
+		- with interfaces can support multiple inheritance
+		
+	- Polymorphism
+		- ability to take multiple forms
+		- overloading   - compile time (static) polymorphism
+		- overriding	- runtime polymorphism
+	
+	- Interface
+		- contract b/w class and outside world
+		- contain only abstract methods
+		- constants
+		- using implements
+		- marker interfaces - no method declarations
+		
+	- Object
+		- base/root class
+		- hashCode()
+		- equals()
+		- toString()
 			
 Reference: https://docs.oracle.com/javase/tutorial/		
 	
