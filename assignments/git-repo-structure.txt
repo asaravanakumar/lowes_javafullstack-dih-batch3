@@ -30,7 +30,7 @@ lowes_javabootcamp-dih-batch3
 					|
 					 __ bankingapp-with-impexp
 					|
-					 __ bankingapp-with-validation
+					 __ bankingapp-with-impexp-thread
 					|
 					 __ bankingapp-with-jdbc
 					|
