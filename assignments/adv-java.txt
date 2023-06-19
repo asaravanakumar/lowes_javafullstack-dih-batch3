@@ -45,3 +45,5 @@ ASSIGNMENT 08: Enhance Banking App to import and export the details from or to f
 				9] Exit
 
 ASSIGNMENT 09: Enhance Banking App to import and export the details from or to file as separate threads
+
+ASSIGNMENT 10: Enhance Banking App to do Account detail validation using Lambda Expression
