@@ -32,9 +32,10 @@ lowes_javabootcamp-dih-batch3
 					|
 					 __ bankingapp-with-impexp-thread
 					|
-					 __ bankingapp-with-jdbc
+					 __ bankingapp-with-lamexp-stream-stats
 					|
-					 __ bankingapp-with-stats
+					 __ bankingapp-with-jdbc
+
 				|
 				|__springcore
 					|
