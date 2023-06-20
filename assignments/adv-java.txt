@@ -46,4 +46,5 @@ ASSIGNMENT 08: Enhance Banking App to import and export the details from or to f
 
 ASSIGNMENT 09: Enhance Banking App to import and export the details from or to file as separate threads
 
-ASSIGNMENT 10: Enhance Banking App to do Account detail validation using Lambda Expression and implement Print Statistics using Stream API
+ASSIGNMENT 10: Enhance Banking App to do Account detail validation using Lambda Expression and implement Print Statistics using Stream API.
+               Also, make AccountType as Enum and capture Account CreateTime and UpdateTime. Show avg account age by account type under Print Statistics.
