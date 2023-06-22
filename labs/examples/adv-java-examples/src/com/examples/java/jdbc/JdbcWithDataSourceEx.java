@@ -1,16 +1,19 @@
 package com.examples.java.jdbc;
 
 //STEP 1. Import required packages
+
+import javax.sql.DataSource;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class JdbcWithDriverManagerEx {
-	// JDBC driver name and database URL
-	static final String JDBC_DRIVER = "org.postgresql.Driver";
+import org.postgresql.ds.PGSimpleDataSource;
+
+public class JdbcWithDataSourceEx {
+
+	// Database URL
 	static final String DB_URL = "jdbc:postgresql://localhost:5432/training";
 
 	// Database credentials
@@ -18,19 +21,20 @@ public class JdbcWithDriverManagerEx {
 	static final String PASS = "postgres";
 
 	public static void main(String[] args) {
-
 		Connection conn = null;
 		Statement stmt = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-
 		try {
-			// STEP 2: Register JDBC driver with Driver Manager
-			Class.forName(JDBC_DRIVER);
+			// STEP 2: Create Datasource instance
+			PGSimpleDataSource dataSource = new PGSimpleDataSource();
+			dataSource.setUrl(DB_URL);
+			dataSource.setUser(USER);
+			dataSource.setPassword(PASS);
 
 			// STEP 3: Open a connection
 			System.out.println("Connecting to database...");
-			conn = DriverManager.getConnection(DB_URL, USER, PASS);
+			conn = dataSource.getConnection();
 			conn.setAutoCommit(false); // enable transaction
 
 			System.out.println("Connection estabilished: " + conn);
@@ -40,39 +44,39 @@ public class JdbcWithDriverManagerEx {
 			stmt = conn.createStatement();
 
 			// Insertion with Statement
-			String insertQuery = "INSERT INTO employee (name, age, designation, department, country) VALUES ('Sunil', 30, 'Developer', 'Admin', 'India')";
-			//boolean status = stmt.execute(insertQuery);
-			int insertCount = stmt.executeUpdate(insertQuery);
-			System.out.println("Employee inserted " + insertCount);
+//			String insertQuery = "INSERT INTO employee (name, age, designation, department, country) VALUES ('Anil', 30, 'Developer', 'Admin', 'India')";
+//			//boolean status = stmt.execute(insertQuery);
+//			int insertCount = stmt.executeUpdate(insertQuery);
+//			System.out.println("Employee inserted " + insertCount);
 
 			// Insertion with Prepared Statement
-//			String insertQueryForPrepareStmt = "INSERT INTO employee (name, age, designation, department, country) VALUES (?, ?, ?, ?, ?)";
-//			pstmt = conn.prepareStatement(insertQueryForPrepareStmt);
-//			pstmt.setString(1, "Mathew");
-//			pstmt.setInt(2, 30);
-//			pstmt.setString(3, "Lead");
-//			pstmt.setString(4, "IT");
-//			pstmt.setString(5, "India");
-//			int insertCount = pstmt.executeUpdate();
-//			pstmt.close();
-//			System.out.println(insertCount + " Employee(s) inserted");
+			String insertQueryForPrepareStmt = "INSERT INTO employee (name, age, designation, department, country) VALUES (?, ?, ?, ?, ?)";
+			pstmt = conn.prepareStatement(insertQueryForPrepareStmt);
+			pstmt.setString(1, "Mathew");
+			pstmt.setInt(2, 30);
+			pstmt.setString(3, "Lead");
+			pstmt.setString(4, "IT");
+			pstmt.setString(5, "India");
+			int insertCount = pstmt.executeUpdate();
+			pstmt.close();
+			System.out.println(insertCount + " Employee(s) inserted");
 
 			// Updation with Prepared Statement
-//			String updateQuery = "UPDATE employee SET designation = ? WHERE id = ?";
-//			pstmt = conn.prepareStatement(updateQuery);
-//			pstmt.setString(1, "Software Engineer");
-//			pstmt.setInt(2, 1);
-//			int updateCount = pstmt.executeUpdate();
-//			pstmt.close();
-//			System.out.println(updateCount + " Employee(s) updated");
+			String updateQuery = "UPDATE employee SET designation = ? WHERE id = ?";
+			pstmt = conn.prepareStatement(updateQuery);
+			pstmt.setString(1, "Software Engineer");
+			pstmt.setInt(2, 1);
+			int updateCount = pstmt.executeUpdate();
+			pstmt.close();
+			System.out.println(updateCount + " Employee(s) updated");
 
 			// Deletion with Prepared Statement
-//			String deleteQuery = "DELETE FROM employee WHERE id = ?";
-//			pstmt = conn.prepareStatement(deleteQuery);
-//			pstmt.setInt(1, 2);
-//			int deleteCount = pstmt.executeUpdate();
-//			pstmt.close();
-//			System.out.println(deleteCount + " Employee(s) deleted");
+			String deleteQuery = "DELETE FROM employee WHERE id = ?";
+			pstmt = conn.prepareStatement(deleteQuery);
+			pstmt.setInt(1, 2);
+			int deleteCount = pstmt.executeUpdate();
+			pstmt.close();
+			System.out.println(deleteCount + " Employee(s) deleted");
 
 			// persist the changes
 			conn.commit();
@@ -102,13 +106,15 @@ public class JdbcWithDriverManagerEx {
 			se.printStackTrace();
 			try {
 				conn.rollback();
-			} catch (SQLException e) {}
+			} catch (SQLException e) {
+			}
 		} catch (Exception e) {
 			// Handle errors for Class.forName
 			e.printStackTrace();
 			try {
 				conn.rollback();
-			} catch (SQLException sqle) {}			
+			} catch (SQLException sqle) {
+			}
 		} finally {
 			// finally block used to close resources
 			try {
