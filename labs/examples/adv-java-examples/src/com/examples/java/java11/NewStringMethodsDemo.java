@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 public class NewStringMethodsDemo {
 
 	public static void main(String[] args) {
+
 		// isBlank, lines, strip, stripLeading, stripTrailing, and repeat
 		String multilineString = "Java \n \n is \n Object Oriened and Functional language.";
 		List<String> lines = multilineString
