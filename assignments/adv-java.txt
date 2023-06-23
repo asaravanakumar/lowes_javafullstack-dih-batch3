@@ -51,3 +51,6 @@ ASSIGNMENT 10: Enhance Banking App to do Account detail validation using Lambda 
 
 ASSIGNMENT 11: Enhance Banking App to persist account details in database and perform CRUD operations using JDBC
 
+ASSIGNMENT 12: Migrate Banking App [ASSIGNMENT 10] as Maven Java project and add Junit test cases
+
+
