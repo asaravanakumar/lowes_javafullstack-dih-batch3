@@ -55,5 +55,8 @@ ASSIGNMENT 12: Migrate Banking App [ASSIGNMENT 10] as Maven Java project and add
 
 ASSIGNMENT 13: Migrate Banking App [ASSIGNMENT 11] as Maven Java project and add Junit test cases with Mockito
 
+ASSIGNMENT 14: Enhance Banking App to persist account details in database and perform CRUD operations using Hibernate (Annotation)
+
+
 
 
