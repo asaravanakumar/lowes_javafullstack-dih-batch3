@@ -34,11 +34,11 @@ lowes_javabootcamp-dih-batch3
 					|
 					 __ bankingapp-with-lamexp-stream-stats
 					|
-					 __ bankingapp-with-lamexp-stream-stats-junit
-					|
 					 __ bankingapp-with-jdbc
 					|
-					 __ bankingapp-with-jdbc-junit
+					 __ bankingapp-with-junit
+					|
+					 __ bankingapp-with-junit-mockito
 
 				|
 				|__springcore
