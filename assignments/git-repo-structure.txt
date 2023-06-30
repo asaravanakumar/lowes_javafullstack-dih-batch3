@@ -39,6 +39,8 @@ lowes_javabootcamp-dih-batch3
 					 __ bankingapp-with-junit
 					|
 					 __ bankingapp-with-junit-mockito
+					|
+					 __ bankingapp-with-hibernate
 
 				|
 				|__springcore
