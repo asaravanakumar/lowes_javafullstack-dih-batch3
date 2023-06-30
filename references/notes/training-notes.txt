@@ -1,0 +1,644 @@
+Intro to Java
+
+	Java Features / Characteristics
+		Open Source
+		Simple
+		Object Oriented
+		Platform Independent
+		High Performance
+		Portable
+		Multi Threaded
+		Robust
+		Interpreted
+		Dynamic
+		Secure
+
+	JDK vs JRE vs JVM
+		Oracle JDK - Windows, Linux, Mac
+		Open JDK  - Windows, Linux, Mac
+
+	JVM Architecture
+		Class Loader
+		Memory Management
+		Execution Engine
+
+	Data Types
+		Primitive
+			byte (1)		
+			short (2)
+			int (4)
+			long (8)
+			float (4)
+			double (8)
+			boolean (1)
+			char (2)
+		Non-Primitive / Wrapper classes
+			Byte
+			Short
+			Integer
+			Long
+			Float
+			Double
+			Boolean
+			Character
+		Reference Variable
+			String
+			Date
+			List
+			Set
+			Map
+		
+ 	Operator
+		Arithmetic + - * / % ++ —
+		Relational == !- > < >= <=
+		Logical      && || !
+		Bit Wise | & ^
+		Assignment = += -= *= /=
+		Conditional (expr)?true:false
+		instance of (var instanceof class)
+
+	Java Program
+	Class
+		Block 
+			if(a > 10) {
+				System.out.println(a);
+			}
+			else {
+				System.out.println(“Invalid value”);
+			}
+
+			Statement  System.out.println(a+b);
+				Expression  (a == 10) && (b >= 20)
+
+   Comments
+		In line Comment => //
+		Multi line Comment. => /* */
+		Class level Comment => /** */
+
+   Control Structures
+		IF ELSE
+			if(expr) {
+
+			}
+
+			if(expr) {
+
+			} else if(expr) {
+
+			}
+
+			if(exp) {
+
+			} else {
+
+			}
+		SWITCH CASE
+		
+		LOOP
+
+			for
+				for(intiatization; condition; inc/dec) {
+
+				}
+
+				for(int i =0; i < arr.length; i++) {
+
+				}
+
+			while
+				while(expr) { }
+
+			do…while
+				do {
+
+				} while(expr)
+
+			foreach
+				for(item: collection) {
+				}
+
+				for(int item:arr) {
+					System.out.println(item)
+				}
+		
+	Naming Conventions
+			Variables - empDeptName
+			Methods. - createEmpDept
+
+			Class.  - EmployeeDeptLocation
+
+			Package - com.lowes.shopping-app
+
+	Git
+			Create GitHub Account
+			Create Git Repository
+			Clone Repository			- git clone <repo-url>
+			Staging the changes		- git add <path>
+			Committing the changes	- git commit -m “message”
+			Push Changes			- git push
+			Pull Changes				- git pull
+			Status Check				- git status
+									   git rm <path>
+									   git restore <path> 
+                                                                         git restore —staged <path>
+									   git diff <path>
+	
+	Arrays
+	
+	Strings
+	
+	StringTokenizer
+	StringBuilder
+	StringBuffer
+
+	BankingApp
+		Customer
+		Account
+		Transaction	
+			
+		
+
+	Class	- Blue Print, Template, Wrapper
+	public class Car {
+		String color;
+		double weight;
+		String breakType;
+		String model;
+		String transmission;
+		String manufacturer;
+		…
+		
+		public Car() {
+		}		
+
+		public void start() { }
+		public void stop() {}
+		public void applyBreak() {}
+		public void accelerate() {}
+		public void changeGear() {}
+		public void reverse() {}
+	}
+
+	Object   - Instance of Class
+	Car swift = new Car();
+	swift.manufacturer = “Maruti Suzuki”;
+	swift.model = “VXI”;
+	swfit.color = “White”;
+	swift.transmission = “manual”;
+	…
+		
+	Car thaar = new Car();
+	thaar.manufacturer = “Mahindra”;
+	thar.color = “black”;
+	…
+
+
+	Abstraction
+		- showing essential details
+		- abstract class
+			- can’t create instance
+			- can have abstract method
+				public abstract void print();
+
+	Encapsulation
+		- hiding details
+		- expose details thru an uniform interface
+		- access modifiers
+			private - class level
+			default - package level access
+			protected - package level, inherited class outside package
+			public - across all packages
+
+
+	Polymorphism
+
+	Inheritance
+		- Inheriting properties / behaviours from parent to Child
+		- Single, Multi Level, Multiple
+		- extends
+
+	Collection Framework
+		
+		Iterable
+			iterator()
+
+		Collection
+			- add(E e)
+			- addAll(Collection c)
+			- remove(E e)
+			- removeAll(Collection c)
+			- contains(E e)
+			- containsAll(Collection c)
+			- retainsAll(Collection c)
+			- size()
+			- isEmpty()
+			- toArray()
+			- iterator()
+			
+		List [Ordered, Allows Duplicates]
+			- add(int index, E e)
+			- remove(int index)
+			- set(int index E e)
+			- get(int index)
+			- indexOf(Object o)
+			- listIterator()
+			
+		Iterator
+			- hasNext()
+			- next()
+
+		ListIterator
+			- hasNext()
+			- hasPrevious()
+			- next()
+			- previous()
+			- nextIndex()
+			- previousIndex()
+			- add(Object o)
+			- remove()
+			- set(Object o)
+
+		ArrayList [Suitable for frequent reads with Random access]
+		Vector [Synchronized, Thread Safe, Suitable for frequent reads with Random access with MultiThreaded Apps]
+		LinkedList []		
+
+		Queue
+			- add(Object e)
+			- remove()
+			- element()
+			- offer(Object e)
+			- poll()
+			- peek()
+		Deque
+			- addFirst(e)
+			- addLast(e)
+			- removeFirst()
+			- removeLast()
+			- getFirst()
+			- getLast()
+
+			- offerFirst(e)
+			- offerLast(e)
+			- pollFirst()
+			- pollLast()
+			- peekFirst()
+			- peekLast()
+
+			- push(e)
+			- pop()
+			- peek()
+
+		Set [Unordered, Unique, Sorted]
+			- add(E e)
+			- addAll(Collection c)
+			- remove(E e)
+			- removeAll(Collection c)
+			- contains(E e)
+			- containsAll(Collection c)
+			- retainsAll(Collection c)
+			- size()
+			- isEmpty()
+			- toArray()
+			- iterator()
+
+		HashSet [Faster Search]
+		LinkedHashSet
+		TreeSet
+
+		Comparable
+			- compareTo(o)
+
+		Comparator
+			- int compare(o1, o2)
+
+		Map [key, value]
+			- put(k,v)
+			- get(k)
+			- replace(k,v)
+			- remove(k)
+			- size()
+			- clear()
+
+			- keySet()
+			- values()
+			- entrySet()
+
+		Hashtable [Synchronized, Thread Safe, Not allow NULL key]
+		HashMap [Not synchronised, Allows NULL key, values]
+			
+		LinkedHashMap
+		TreeMap [Sorted based on Key]
+
+	Generics
+	
+		Generic method [Type Inference]
+
+		public <E> void print(E[] e) {
+			for(E item: e) {
+				System.out.println(e);
+			}
+		}
+
+		Integer[] ints = {10,20,30}
+		String[] strs = {“Hello”, “Lowes”}
+		print(ints);	
+		print(strs);
+
+		Generic Class [Type Erasure]
+	
+		public class Shape<T, U> {
+			private T t;
+			private U u;
+
+			public void set(T t) {
+				this.t = t;
+			}
+
+			public T get() {
+				return this.t;
+			}
+		}
+
+		public class Shape<Circle, Integer> {
+			private Circle t;
+			private Integer u;
+
+			public void set(Circle t) {
+				this.t = t;
+			}
+
+			public Circle get() {
+				return this.t;
+			}
+		}
+
+		public class Shape<Square, Double> {
+			private Square t;
+			private Double u;
+
+			public void set(Square t) {
+				this.t = t;
+			}
+
+			public Square get() {
+				return this.t;
+			}
+		}
+
+	
+		
+		Shape<Circle, Integer> circle = new Shape<>(new Circle(), 20);
+		Shape<Square, Double> square = new Shape<>(new Square(), 10.5);
+
+	Annotations
+		Provides Metadata to the compiler or JVM to do the processing
+
+		@AnnotationName
+
+		Standard Annotation
+			@Override
+			@Deprecated
+			@SuppressWarnings
+			@Javadoc
+			
+		Meta Annotations
+			@Target
+			@Retention
+			@Documented
+
+		Custom Annotation
+		
+	
+	Java IO
+		- Console
+			- Scanner
+			- PrintStream [System.out.println]
+		- File
+			- FileReader / FileWriter [Character Stream]
+			- FileInputStreamReader / FileOutputStreamWriter [Byte Stream]
+		- Socket/Network
+
+		- GUI
+			- Swing, JFC
+		- DB
+			- JDBC
+
+		Savings 20
+		Deposits 30
+		Loan	50
+
+		Deposits 30
+		Loan	50
+		Savings	20
+
+		Savings 5500.0
+		Deposits 10000.0
+
+	Thread
+		- Different ways to create thread
+			- Extending Thread class
+			- Implementing Runnable interface
+			- Implementing Callable interface
+				- Thread Executor Framework
+					Executor -> execute()
+					ExecutorService	-> submit(), shutdown(), invokeAll()	
+
+			
+		- Thread Concepts
+			- sleep()
+			- interrupt()
+			- synchronised
+			- join()
+			- wait()
+			- notify()
+			- notifyAll()
+
+
+			- yield()
+			- volatile
+			
+		- Thread Executor Framework
+			- Callable
+			- Executor
+			- ExecutorService
+			- Executors
+			- Future
+
+	Java 8 Features
+
+		- Functional Programming (FP)
+		- FP vs OOP
+		- Lambda Expression
+			[param list] -> [exp body]
+			() -> System.out.println(“Hello”)
+
+			Consumer<String> greeting1 = msg -> System.out.println(msg)
+			BiConsumer
+			Supplier<String> greeting2   = () -> {return “Hello Lowes”;}
+			Function<Integer, Integer> square = a -> a * a;
+			BiFunction
+			UnaryOperator<Integer> square = a -> a * a;
+			BinaryOperator
+			Predicate<Integer> check = a -> a > 10;
+			BiPredicate
+
+		- Functional Interfaces [java.util.function]
+		- Default Methods
+			
+		- Method References
+			[Classname|ObjRef]::[methodName]
+			items.foreach(System.out::println)
+
+		- Optional
+
+			Optional<Account> getAccount(int id) {
+				return Optional.of(accounts.get(id));
+			}
+
+			Optional<Account> accOP = getAccount(100);
+
+			accOp.get() // throws NoSuchElementException
+
+			accOp.orElse(() -> Account::new))
+
+			accOp.orElseThrow(() -> RuntimeException::new)
+
+			
+			Optional<List<Account>> getAccounts() {
+				return Optional.of(accounts));
+			}				
+
+			Optional<List<Account>> accountsOp = getAccounts().filter(item -> 	item.contains(“”))
+			
+			if(acc != null) {
+				acc.getId();
+				acc.getName();
+			} else {
+				acc = new Account(10, “Manjeet”);
+			}
+			
+			if(accOp.isPresent()) {
+				acc = accOp.get();
+			}
+
+						
+
+		- Stream API [java.util.stream]
+			Streaming Source ——> Intermediate Operations ———> Terminal operation
+			[Array, Collection, IO]	 [filter, map, distinct, sorted].         [count, sum, collect, reduce, avg, min, max, foreach]
+
+			accounts
+				.stream() // creates streaming instance
+				//.filter(acc -> acc.getType() == “Savings”) 
+			//	.map(acc -> acc.getId())
+				.distinct() 
+			//	.count()
+			//	.collect(Collectors.toList())
+				.collect(Collectors.groupingBy(Account::getType), Collectors.count())
+				.
+			
+		- DateTime [java.time]
+			LocalDateTime
+			OffsetDateTime +5:30
+			ZonedDateTime [Asia/Kolkata]
+			Instant - UTC/GMT - 5:30 am
+
+		- Nashorn Javascript Engine
+		- Base64 Encoding
+
+
+	JDBC
+			
+		STEP 1: Load and Register Driver
+		STEP 2: Create Connection
+		STEP 3: Create Statement with Query
+		STEP 4: Execute Query 
+		STEP 5: Iterate thru the Resultset
+
+		DataSource
+		DriverManager
+		Connection
+			- createStatement()
+			- createStatement(TYPE_SCROLL_INSENSITIVE, CONCUR_UPDATABLE, CLOSE_CURSOR_AT_COMMIT)
+			- prepareStatement(q)
+			- setAutoCommit(false) // to enable transaction
+			- commit()
+			- rollback()
+		Statement
+			- addBatch()
+			- execute(q)
+			- executeUpdate(q)
+			- executeQuery(q)
+			- executeBatch()
+		PreparedStatement
+			- execute()
+			- executeUpdate()
+			- executeQuery()
+			- executeBatch()
+		CallableStatement
+
+		Transaction Management
+
+		ResultSet
+			- ResultSetType - TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITIVE
+			- Concurrency - CONCUR_READ_ONLY, CONCUR_UPDATABLE
+			- Holdability - CLOSE_CURSOR_AT_COMMIT, HOLD_CURSOR_OVER_COMMIT
+
+		RowSet
+			- JdbcRowSet
+			- CachedRowSet
+
+		
+	Java 9 Features
+		JShell - REPL (Read Evaluate Process Loop)
+		Factory Methods for Immutable List, Set and Map - of()
+		Private Methods in Interfaces	
+		Stream API Enhancements
+		Reactive Streams
+		Module System
+
+	Java 10 Features
+		Local Variable Type Inference
+		Optional Enhancements - orElseThrow()
+		Collection Enhancements - copyOf() factory method
+		Stream API Enhancements - Collectors can return unmodifiable collection
+
+	Java 11 Features
+		Compile Free Launch
+		var in Lambda
+		New methods in String - lines, isBlank, strip, stripTrailing, stringLeading, repeat
+		Not Predicate
+		Optional isEmpty support
+		New HttpClient
+
+	Maven
+		 - Build tool [Ant, Maven, Gradle]
+		 - Project Management - compile, test, package (jar)
+		 - Dependency Management
+	
+		- pom.xml
+			- Project Metadata
+			- Dependency Details
+			- Build Details
+
+		- Lifecycle Goals
+			- clean
+			- compile
+			- test
+			- package
+			- install
+		
+	Testing
+
+	Functional Testing
+		Unit Testing - JUnit
+		Integration Testing
+		Regression Testing	
+		End to End Testing
+
+	Non Functional Testing		
+		Performance Testing	
+		Security Testing
+		UX Testing	
+
+	User Acceptance Testing
