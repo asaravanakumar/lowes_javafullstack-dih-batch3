@@ -1,4 +1,4 @@
-package com.examples.spring;
+package com.examples.spring.jpa;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,9 +10,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.examples.spring.jpa.Item;
-import com.examples.spring.jpa.Order;
 
 @ContextConfiguration
 @ExtendWith(SpringExtension.class)
