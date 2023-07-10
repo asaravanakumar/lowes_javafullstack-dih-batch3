@@ -2,7 +2,6 @@ package com.examples.spring.hibernate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.examples.spring.hibernate.hibernate.Item;
 import org.hibernate.SessionFactory;
 import org.hibernate.Session;
 import org.junit.jupiter.api.Test;
@@ -11,8 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.examples.spring.hibernate.hibernate.Order;
 
 @ContextConfiguration
 @ExtendWith(SpringExtension.class)

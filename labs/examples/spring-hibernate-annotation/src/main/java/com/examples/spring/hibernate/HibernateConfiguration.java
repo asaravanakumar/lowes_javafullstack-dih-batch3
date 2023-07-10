@@ -1,4 +1,4 @@
-package com.examples.spring.hibernate.hibernate;
+package com.examples.spring.hibernate;
 
 import java.util.Properties;
 

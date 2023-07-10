@@ -1,4 +1,4 @@
-package com.examples.spring.hibernate.hibernate;
+package com.examples.spring.hibernate;
 
 
 import javax.persistence.Entity;
