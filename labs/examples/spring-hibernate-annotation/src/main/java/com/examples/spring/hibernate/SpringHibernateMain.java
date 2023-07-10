@@ -1,5 +1,6 @@
 package com.examples.spring.hibernate;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -30,31 +31,25 @@ public class SpringHibernateMain {
 		item1.setPrice(500);
 		item1.setQuantity(50);
 
-		item1.setOrder(order1);
-//
-//		Item item2 = new Item();
-//		item2.setProduct("Hibernate in Action Book");
-//		item2.setPrice(600);
-//		item2.setQuantity(25);
-//
-//		// Add item to Order
-//		order1.setItems(Arrays.asList(item1, item2));
-//
-//		Long orderId1 = springHibernateMain.createOrder(order1);
-//		//Long orderId2 = springHibernateMain.createOrder(order1);
-//
-//		springHibernateMain.showOrders();
+		Item item2 = new Item();
+		item2.setProduct("Hibernate in Action Book");
+		item2.setPrice(600);
+		item2.setQuantity(25);
 
-		springHibernateMain.createOrder(order1);
-		springHibernateMain.createItem(item1);
-//
-//		springHibernateMain.updateOrder(1L, "Anil");
+		// Add item to Order
+		order1.setItems(Arrays.asList(item1, item2));
+
+		Long orderId1 = springHibernateMain.createOrder(order1);
+
+		springHibernateMain.showOrders();
+
+		springHibernateMain.updateOrder(orderId1, "Anil");
 		
 		springHibernateMain.showOrders();
 		
-//		springHibernateMain.deleteOrder(orderId1);
-//		
-//		springHibernateMain.showOrders();
+		springHibernateMain.deleteOrder(orderId1);
+
+		springHibernateMain.showOrders();
 	}	
 
 	private Long createOrder(Order order)
