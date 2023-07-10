@@ -46,6 +46,8 @@ lowes_javabootcamp-dih-batch3
 				|__springcore
 					|
 					|___bankingapp-with-spring-core-jdbc
+					|
+					|___bankingapp-with-spring-core-jpa
 				|
 				|__sprngmvc
 					|
