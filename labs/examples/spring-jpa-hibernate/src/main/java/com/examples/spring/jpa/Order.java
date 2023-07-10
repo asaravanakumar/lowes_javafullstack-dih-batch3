@@ -1,5 +1,4 @@
-package com.examples.spring.hibernate;
-
+package com.examples.spring.jpa;
 
 import java.util.Collection;
 import java.util.LinkedHashSet;
@@ -13,7 +12,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-
 /**
  * An order.
  */
@@ -22,7 +20,7 @@ import javax.persistence.Table;
 public class Order {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
 	private String customer;

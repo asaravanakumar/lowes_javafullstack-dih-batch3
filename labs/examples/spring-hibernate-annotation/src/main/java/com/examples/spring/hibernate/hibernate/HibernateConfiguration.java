@@ -1,14 +1,10 @@
-package com.examples.spring.hibernate;
+package com.examples.spring.hibernate.hibernate;
 
 import java.util.Properties;
 
-import javax.sql.DataSource;
-
-import org.hibernate.dialect.H2Dialect;
 //import org.hibernate.dialect.MySQL8Dialect;
 import org.hibernate.dialect.PostgreSQL10Dialect;
 import org.postgresql.ds.PGSimpleDataSource;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
@@ -51,7 +47,7 @@ public class HibernateConfiguration {
 //		props.put("hibernate.dialect", MySQL8Dialect.class.getName());
 		props.put("hibernate.show_sql", "false");
 		props.put("hibernate.format_sql", "false");
-		props.put("hibernate.hbm2ddl.auto", "create");		
+		props.put("hibernate.hbm2ddl.auto", "create");
 
 		LocalSessionFactoryBean bean = new LocalSessionFactoryBean();
 		bean.setAnnotatedClasses(new Class[]{Item.class, Order.class});		

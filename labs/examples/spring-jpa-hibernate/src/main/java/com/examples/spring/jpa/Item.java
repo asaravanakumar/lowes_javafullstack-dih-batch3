@@ -1,5 +1,5 @@
-package com.examples.spring.hibernate;
 
+package com.examples.spring.jpa;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,20 +12,20 @@ import javax.persistence.ManyToOne;
  */
 @Entity
 public class Item {
-
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
-
+	
 	@ManyToOne
 	private Order order;
 
 	private String product;
-
+	
 	private double price;
-
+	
 	private int quantity;
-
+	
 	/**
 	 * @return the order
 	 */
@@ -41,8 +41,7 @@ public class Item {
 	}
 
 	/**
-	 * @param product
-	 *            the product to set
+	 * @param product the product to set
 	 */
 	public void setProduct(String product) {
 		this.product = product;
@@ -56,8 +55,7 @@ public class Item {
 	}
 
 	/**
-	 * @param price
-	 *            the price to set
+	 * @param price the price to set
 	 */
 	public void setPrice(double price) {
 		this.price = price;
@@ -71,8 +69,7 @@ public class Item {
 	}
 
 	/**
-	 * @param quantity
-	 *            the quantity to set
+	 * @param quantity the quantity to set
 	 */
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;

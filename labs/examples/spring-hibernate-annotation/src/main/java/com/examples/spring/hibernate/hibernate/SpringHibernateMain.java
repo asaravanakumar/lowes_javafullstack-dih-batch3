@@ -1,6 +1,5 @@
-package com.examples.spring.hibernate;
+package com.examples.spring.hibernate.hibernate;
 
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -23,28 +22,33 @@ public class SpringHibernateMain {
 		
 		// Create Order
 		Order order1 = new Order();
-		order1.setCustomer("Andrew");
-		
+		order1.setCustomer("Mohan");
+
 		// Create Item
 		Item item1 = new Item();
 		item1.setProduct("Spring in Action Book");
 		item1.setPrice(500);
 		item1.setQuantity(50);
-		
-		Item item2 = new Item();
-		item2.setProduct("Hibernate in Action Book");
-		item2.setPrice(600);
-		item2.setQuantity(25);		
-				
-		// Add item to Order
-		order1.setItems(Arrays.asList(item1, item2));
-		
-		Long orderId1 = springHibernateMain.createOrder(order1);	
-		//Long orderId2 = springHibernateMain.createOrder(order1);
-		
-		springHibernateMain.showOrders();
-		
-		springHibernateMain.updateOrder(orderId1, "Anil");
+
+		item1.setOrder(order1);
+//
+//		Item item2 = new Item();
+//		item2.setProduct("Hibernate in Action Book");
+//		item2.setPrice(600);
+//		item2.setQuantity(25);
+//
+//		// Add item to Order
+//		order1.setItems(Arrays.asList(item1, item2));
+//
+//		Long orderId1 = springHibernateMain.createOrder(order1);
+//		//Long orderId2 = springHibernateMain.createOrder(order1);
+//
+//		springHibernateMain.showOrders();
+
+		springHibernateMain.createOrder(order1);
+		springHibernateMain.createItem(item1);
+//
+//		springHibernateMain.updateOrder(1L, "Anil");
 		
 		springHibernateMain.showOrders();
 		
@@ -64,6 +68,19 @@ public class SpringHibernateMain {
 
 		session.close();
 		return orderId;
+	}
+
+	private Long createItem(Item item)
+	{
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		// persist order detail
+		Long itemId = (Long) session.save(item);
+		session.getTransaction().commit();
+		System.out.println("Item added successfully. ID - " + itemId);
+
+		session.close();
+		return itemId;
 	}
 	
 	private void updateOrder(Long orderId, String customerName)
