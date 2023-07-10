@@ -1,1 +1,3 @@
 ASSIGNMENT 15: Enhance Banking App (ASSIGNMENT 13) to persist account details in database and perform CRUD operations using JDBC with Spring Java Based Configuration
+
+ASSIGNMENT 16: Enhance Banking App (ASSIGNMENT 15) to persist account details in database and perform CRUD operations using JPA with Junit test cases
