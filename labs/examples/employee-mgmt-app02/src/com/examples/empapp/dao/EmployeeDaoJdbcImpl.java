@@ -25,11 +25,11 @@ public class EmployeeDaoJdbcImpl implements EmployeeDao {
 	public Connection getConnection() {
 		try {
 			if(conn == null) {
-		//		MysqlDataSource datasource = new MysqlDataSource();
-		//		datasource.setServerName("localhost");
-		//		datasource.setDatabaseName("jdbctraining");
-		//		datasource.setUser("training");
-		//		datasource.setPassword("training");
+				//		MysqlDataSource datasource = new MysqlDataSource();
+				//		datasource.setServerName("localhost");
+				//		datasource.setDatabaseName("jdbctraining");
+				//		datasource.setUser("training");
+				//		datasource.setPassword("training");
 
 				PGSimpleDataSource datasource = new PGSimpleDataSource();
 				datasource.setServerNames(new String[]{"localhost"});
@@ -152,7 +152,7 @@ public class EmployeeDaoJdbcImpl implements EmployeeDao {
 				int id = rs.getInt("id");
 				String name = rs.getString("name");
 				int age = rs.getInt("age");
-				String designation = rs.getString("designation");				
+				String designation = rs.getString("designation");
 				String department = rs.getString("department");
 				String country = rs.getString("country");
 				employees.add(new Employee(id, name, age, designation, department, country));
